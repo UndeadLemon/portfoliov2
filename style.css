@@ -15,13 +15,19 @@ body{
     height: 100vh;
     margin: 0;
 }
+.nav-spacer{
+    height:3rem;
+}
+.active-nav{
+    color:#c280e4;
+}
 main{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
-section{
+main > section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +38,33 @@ section{
 .intro{
     
     flex-direction: column;
-    background-color: var(--lilac);
+    background: linear-gradient(235deg, #97b5b8, #deb8f1, #e8e8e5);
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient 15s ease infinite;
+    -moz-animation: gradient 15s ease infinite;
+    -o-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+}
+@-webkit-keyframes gradient {
+    0%{background-position:78% 0%}
+    50%{background-position:23% 100%}
+    100%{background-position:78% 0%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:78% 0%}
+    50%{background-position:23% 100%}
+    100%{background-position:78% 0%}
+}
+@-o-keyframes gradient {
+    0%{background-position:78% 0%}
+    50%{background-position:23% 100%}
+    100%{background-position:78% 0%}
+}
+@keyframes gradient {
+    0%{background-position:78% 0%}
+    50%{background-position:23% 100%}
+    100%{background-position:78% 0%}
 }
 .about-me{
     flex-direction: column;
@@ -46,6 +78,9 @@ nav {
     width: 100vw;
     background-color: #63347c;
     color: #e1c2f0;
+}
+nav > p{
+    padding-right: 1rem;
 }
 nav > ul{
     list-style: none;
@@ -72,4 +107,9 @@ nav > ul > li > a{
     width: 1rem;
     height: 1rem;
     border:none;
+}
+.contact-info{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
